@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.util.List;
 
 public class MyBatisApplication1 {
-    
+
     public static void main(String[] args) throws Exception {
         InputStream xml = Resources.getResourceAsStream("mybatis-config-1.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(xml);
