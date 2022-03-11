@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
+import java.sql.SQLOutput;
 import java.util.List;
 
 public class MyBatisApplication2 {
@@ -17,6 +18,7 @@ public class MyBatisApplication2 {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(xml);
         
         DepartmentDao departmentDao = new DepartmentDaoImpl(sqlSessionFactory);
+
         List<Department> departmentList = departmentDao.findAll();
         departmentList.forEach(System.out::println);
     }
